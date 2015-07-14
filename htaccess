@@ -1,0 +1,18 @@
+
+Redirect /admin http://ahoia.com/wp-admin
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+RewriteCond %{HTTP_HOST} ^ahoia\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ahoia\.co\.uk$
+RewriteRule ^/?$ "http\:\/\/www\.ahoia\.com\/" [R=301,L]
+

@@ -1,0 +1,168 @@
+<?php
+/*
+Template Name: Page - shows page
+*/
+?>
+<?php get_header(); ?>
+
+<?php 
+/* #Start the Loop
+======================================================*/
+if (have_posts()) : while (have_posts()) : the_post(); 
+?>
+
+<?php
+/* #Get Fullscreen Background
+======================================================*/
+$pageimage = get_post_meta($post->ID,'_thumbnail_id',false);
+$pageimage = wp_get_attachment_image_src($pageimage[0], 'portfoliolarge', false); 
+ag_fullscreen_bg($pageimage[0]); 
+?>
+
+<div class="contentarea">
+
+<!-- Page Title
+  ================================================== -->
+<div class="container namecontainer">
+    <div class="pagename">
+        <h2><span><?php echo the_title(); ?></span></h2>
+    </div>
+</div>
+
+<!-- Page Content
+  ================================================== -->
+<div class="container clearfix"><!-- For Stupid ie7-->
+    <div class="largepage pagebg">
+        <div class="contentwrap">
+                    <?php the_content(); ?>
+        
+                    <?php endwhile; else :?>
+                   <!--BEGIN .navigation .page-navigation -->
+                    <?php endif; ?>
+
+                    <h2>Show packages</h2>
+                    <p class="m-bottom">Below is brief description of each individual discipline we provide. All amazing in there own right, but each discipline can be combined for something very special. You simply choose which of these would suit your venture and budget then we tailor a package specially for you.</p>
+                    
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>BMX Flatland </h3>
+                        <p>No ramps or set up times are required, just a flat level area.  The riders perform incredibly fast spinning combinations that include no handed moves that will leave you shocked as to how they manage to stay in control!</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>BMX Jump Box </h3>
+                          <p>This consists of one jump box that folds out from our trailer, this can be assembled within 30 minutes. Our riders hit the box at great speed to perform all the top moves including backflips ,frontflips , 360's , 720's, tailwhips and supermans plus many more! A huge spectacle for any occasion.</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>BMX Trilas </h3>
+                          <p>The trilas structure that can exceed over 10ft tall in height consisting of various sized tables and ladders, the riders use static control on there brakes to perform powerful leaps across the structure using incredible balance.</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>Free Running </h3>
+                        <p>Free running is all about stamina and body power as they flip and leap from obsticals often using our riders as platforms for their tricks. Freerunning works well put with any of our disciplines adding amazing energy.
+</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>Skateboarding </h3>
+                        <p>Riders flip the skateboard underneath there feet while leaping from or up obstacles as they catch the board again and ride away smoothly, this highly skilled art take an amazing about control.
+</p><p>All our quotes are based on requirements. We have a price promise that will beat any like for like quote on all of these disciplines. There are discounts for multiple dates booked and when you combine any of the packages.</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>Freestyle MotoX </h3>
+                        <p>Perfect arena of stadium entertainment. Our purpose built lorry seperated to make a take of and landing where you will witness the very best motorbike riders launching in to the air and performing unbelievable airborne moves from massive stretched superman moves to the ellusive backflip!</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shows-container">
+                      <div class="left-side">
+                        <div class="service-img">
+                        <img src="" alt="">
+                        </div>
+                      </div>
+                      <div class="right-side">
+                        <h3>Moto Trials </h3>
+                        <p>A different style of motorbike entertainment where the Trials bike is  propelled up and over all kinds of  obstacles. Leaping from structure to structure, pulling burnouts across the floor and wiping the crow into a frenzi!</p>
+                        <div class="cta">
+                          <a href=""><div class="cta-btn"><p>See more</p></div></a>
+                        </div>
+                      </div>
+                    </div>
+
+                
+
+
+
+
+                    
+             <div class="clear"></div>
+        </div>          
+    </div>
+<div class="clear"></div>
+</div>
+<!-- End Page Content -->
+
+</div>
+<div class="clear"></div>
+<?php get_footer(); ?>

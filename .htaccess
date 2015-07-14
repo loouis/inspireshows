@@ -1,0 +1,20 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+RewriteCond %{HTTP_HOST} ^inertiashows\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.inertiashows\.com$
+RewriteRule ^/?$ "http\:\/\/inspirepromotions\.net\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^inertiabmxshows\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.inertiabmxshows\.com$
+RewriteRule ^/?$ "http\:\/\/www\.inspirepromotions\.net\/" [R=301,L]
+

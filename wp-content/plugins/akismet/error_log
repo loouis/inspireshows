@@ -1,0 +1,2 @@
+[31-May-2013 10:08:52 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/procycle/public_html/inspirepromotions.net/wp-content/plugins/akismet/legacy.php on line 356
+[30-Jan-2015 22:47:47 UTC] PHP Fatal error:  Call to undefined function plugin_dir_url() in /home/procycle/public_html/inspireshows.com/wp-content/plugins/akismet/akismet.php on line 32
